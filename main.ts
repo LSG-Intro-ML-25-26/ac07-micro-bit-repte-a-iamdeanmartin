@@ -14,15 +14,15 @@ input.onGesture(Gesture.Shake, function () {
         basic.showIcon(IconNames.Scissors)
     }
     if (player == segundo_player) {
-        basic.showString("Empate")
+        basic.showString("EMPATE")
     } else if (player == 1 && segundo_player == 3) {
-        basic.showString("Ganador")
+        basic.showString("GANADOR")
     } else if (player == 2 && segundo_player == 1) {
-        basic.showString("Ganador")
+        basic.showString("GANADOR")
     } else if (player == 3 && segundo_player == 2) {
-        basic.showString("Ganador")
+        basic.showString("GANADOR")
     } else {
-        basic.showString("Perdedor")
+        basic.showString("PERDEDOR")
     }
 })
 input.onButtonPressed(Button.AB, function () {
