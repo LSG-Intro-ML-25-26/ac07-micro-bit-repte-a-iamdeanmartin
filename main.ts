@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.SmallSquare)
 })
 input.onGesture(Gesture.Shake, function () {
+    let player = 0
     segundo_player = randint(1, 3)
     if (segundo_player == 1) {
         basic.showIcon(IconNames.SmallSquare)
@@ -11,6 +12,17 @@ input.onGesture(Gesture.Shake, function () {
         basic.showIcon(IconNames.Square)
     } else {
         basic.showIcon(IconNames.Scissors)
+    }
+    if (player == segundo_player) {
+        basic.showString("Empate")
+    } else if (player == 1 && segundo_player == 3) {
+        basic.showString("Ganador")
+    } else if (player == 2 && segundo_player == 1) {
+        basic.showString("Ganador")
+    } else if (player == 3 && segundo_player == 2) {
+        basic.showString("Ganador")
+    } else {
+        basic.showString("Perdedor")
     }
 })
 input.onButtonPressed(Button.AB, function () {
